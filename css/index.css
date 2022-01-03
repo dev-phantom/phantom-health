@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --purple-color:#00296a;
+    --light-silver:#BDBDBD;
+    --tomato-color:#E46565;
+}
+body{
+    background-color: #eeeeee;
+    width: 100%;
+    font-family: sans-serif;
+}
+header{ 
+    display: flex;
+
+}
+nav{
+    margin-top: 2.5rem;
+    width: 100%;
+    display: inline-block;
+}
+ .menu-btn {
+    position: absolute;
+    z-index: 99;
+    left: 1rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-btn__burger {
+    position: absolute;
+    right: 0;
+    top: .5rem;
+    width: 18px;
+    height: 3px;
+    background: var(--purple-color);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-btn__burger::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    width: 28px;
+    height: 3px;
+    background: var(--purple-color);
+    transition: all 0.5s ease-in-out;
+  }
+.submenu-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.submenu-flex > .submenu{
+    display: none;
+    background-color: var(--light-silver);
+    width: 90%;
+
+}
+.submenu > a{
+    color: black;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    font: 1em ubuntu;
+}
+.submenu > a:hover{
+    text-decoration: underline;
+    transition: all 0.5s ease-in-out;
+}
+header > img{
+    width: 40px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 1px 1px  2px #272727;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+main{
+    width: 100%;
+    padding-left: 15px;
+}
+main > h1{
+    color: var(--purple-color);
+    text-transform: capitalize;
+    padding-top: 8vh;
+    font-size: 35px;
+    width: 80%;
+    font-weight: normal;
+    font-family:sans-serif;
+}
+
+.search-div{
+    display: flex;
+    margin-top: 5vh;
+    align-items: center;
+    position: relative;
+  }
+  .search-div>input {
+    padding-left: 1rem;
+    color: #F57F17;
+    width: 75%;
+    height: 2.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: none;
+    outline: none;
+    background: var(--light-silver);
+
+  }
+  .search-div>input::placeholder{
+    color: var(--black-color);
+  }
+  .search-div> button {
+    position: absolute;
+    right: 4rem;
+    width:3rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    color: var(--white-color);
+    background: var(--tomato-color);
+
+  }
+  .search-div > button > i{
+    color: var(--white-color);
+  }
+  main > h3{
+      padding: 2.5vh 0;
+  }
+  .discover-flex{
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .discover-flex > .card{
+      min-width:30%;
+    padding-top: 18vh;
+    padding-left: 1rem;
+    margin: 2rem 1rem;
+    background-color: var(--white-color);
+    border-radius: 1rem;
+    position: relative;
+  }
+  
+  .card > .description{
+      width: 50%;
+      padding-bottom: 5px;
+      font-weight: 500;
+      text-transform: capitalize;
+    font-size: 15px;
+    color: var(--purple-color);
+    font-family:sans-serif;
+  }
+  .card > .play-download{
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      border-radius: 1rem;
+    min-width: 80%;
+    height: 15vh;
+    background-color: #F57F17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .play-download > i {
+      color: white;
+  }
+ .card > .play-download:first-child{
+      background-color: blue;
+  }
+  .card > .play-download:nth-child(2){
+      background-color:red;
+  }
+  .card > .play-download:nth-child(3){
+      background-color: green;
+  }
