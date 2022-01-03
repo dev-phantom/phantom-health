@@ -131,7 +131,7 @@ main > h1{
   }
   .search-div> button {
     position: absolute;
-    right: 5rem;
+    right: 4.3rem;
     width:3rem;
     height: 2.5rem;
     border-radius: 1rem;
@@ -160,7 +160,7 @@ main > h1{
       min-width:30%;
     padding-top: 18vh;
     padding-left: 1rem;
-    margin: 2rem 1rem;
+    margin: 2rem 1.5rem;
     background-color: var(--white-color);
     border-radius: 1rem;
     position: relative;
@@ -235,6 +235,7 @@ main > h1{
       width: 90%;
       background: var(--light-blue);
       padding: .5rem;
+      margin-left: 0;
       margin-bottom: 1rem;
       border-radius: .5rem;
       cursor: pointer;
