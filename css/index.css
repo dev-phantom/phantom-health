@@ -160,7 +160,7 @@ main > h1{
       min-width:30%;
     padding-top: 18vh;
     padding-left: 1rem;
-    margin: 2rem 1.5rem;
+    margin: 2rem 1rem;
     background-color: var(--white-color);
     border-radius: 1rem;
     position: relative;
@@ -216,6 +216,7 @@ main > h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 1rem;
   }
   .heart > img {
       width: 25px;
