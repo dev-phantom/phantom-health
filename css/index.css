@@ -165,6 +165,10 @@ main > h1{
     border-radius: 1rem;
     position: relative;
   }
+  .discover-flex > .card:nth-child(3){
+      margin-right: 2rem;
+      
+  }
   
   .card > .description{
       width: 50%;
