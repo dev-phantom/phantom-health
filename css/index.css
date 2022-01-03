@@ -111,12 +111,13 @@ main > h1{
 .search-div{
     display: flex;
     margin-top: 2vh;
+    justify-content: unset;
     align-items: center;
     position: relative;
   }
   .search-div>input {
     padding-left: 1rem;
-    color: #F57F17;
+    color: var(--black-color);
     width: 75%;
     height: 2.5rem;
     border-top-left-radius: 1rem;
@@ -165,11 +166,7 @@ main > h1{
     border-radius: 1rem;
     position: relative;
   }
-  .discover-flex > .card:nth-child(3){
-      margin-right: 2rem;
-      
-  }
-  
+
   .card > .description{
       width: 50%;
       padding-bottom: 5px;
@@ -226,6 +223,7 @@ main > h1{
       height: auto;
       color: white;
   }
+  
   .main-doctor{
       display: flex;
       flex-direction: column;
@@ -234,8 +232,6 @@ main > h1{
       width: 100%;
   } 
   .doctor-profile{
-      display:flex;
-      flex-direction: row;
       width: 90%;
       background: var(--light-blue);
       padding: .5rem;
@@ -244,13 +240,17 @@ main > h1{
       border-radius: .5rem;
       cursor: pointer;
   }
-  .doctor-profile > img{
+  .doctor-profile > a{
+    display:flex;
+    flex-direction: row;
+  }
+  .doctor-profile > a > img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: .5rem;
   }
-  .doctor-info{
+  .doctor-profile > a > .doctor-info{
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -265,9 +265,98 @@ main > h1{
     color: var(--purple-color);
     font-weight: 400;
   }
-  .doctor-profile:nth-child(2){
-      background-color: var(--light-orange);
+.doctor-profile:nth-child(2){
+  background: var(--light-orange);
+}
+.doctor-profile:nth-child(3){
+  background: var(--light-tomato);
+}
+  a{
+    text-decoration: none;
   }
-  .doctor-profile:nth-child(3){
-      background-color: var(--light-tomato);
+@media only screen and (min-width:600px) and (max-width:1440px) {
+
+  .search-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: unset;
   }
+  .search-div>input {
+    padding-left: 1rem;
+    color: var(--black-color);
+    width: 75%;
+    height: 2.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: none;
+    outline: none;
+    background: var(--light-silver);
+  }
+  .search-div>input::placeholder{
+    color: var(--black-color);
+  }
+  .search-div> button {
+    position: unset;
+   width:3rem;
+    height: 2.5rem;
+    border-radius: unset;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: none;
+    outline: none;
+    color: white;
+    background: var(--tomato-color);
+  }
+  .search-div > button > i{
+    color: var(--white-color);
+  }
+
+  .discover-flex > .card{
+    min-width:30%;
+  padding-top: 25vh;
+  padding-left: 1rem;
+  margin: 2rem 1rem;
+  background-color: var(--white-color);
+  border-radius: 1rem;
+  position: relative;
+}
+.main-doctor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+} 
+.doctor-profile{
+  width: 90%;
+  background: var(--light-blue);
+  padding: .5rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+.doctor-profile > a{
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.doctor-profile > a > img{
+width: 10rem;
+height: 10rem;
+border-radius: 50%;
+margin-right: .5rem;
+}
+.doctor-profile > a > .doctor-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  text-align: center;
+}
+.doctor-profile:nth-child(3){
+  margin-right: 1rem;
+}
+}
